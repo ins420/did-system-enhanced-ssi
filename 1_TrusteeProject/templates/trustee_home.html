@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+  * {
+    padding: 0px;
+    margin: 0px;
+    font-style: italic;
+  }
+  html, body {
+    width: 100%;
+    height: 100%;
+  }
+  header {
+    width: 100%;
+    height: 20%;
+    font-size: 25px;
+    background: black;
+	color: white;
+	text-align: center;
+	position: relative;
+  }
+  #title {
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%,-50%)
+  }
+  #main {
+    width: 100%;
+    height: 70%;
+  }
+  #container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  #left {
+    margin:0% 2% 2% 2%;
+  }
+  #right {
+    margin:0% 2% 2% 2%;
+  }
+  #left, #center, #right {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    width: 30%;
+    min-height: 300px;
+    text-align: center;
+    color: #333333;
+  }
+  button {
+    border: none;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+    color: #444444;
+    padding: 5%;
+    margin-top: 5%;
+    margin-down: 5%;
+    width: 80%;
+  }
+  #subtitle{
+    text-align: center;
+    padding: 2%;
+    font-size: 25px;
+  }
+  #subject {
+    background-image: linear-gradient(90deg, red, orange, yellow, green, blue, navy, purple);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  .opt {
+    padding-bottom: 3%;
+    text-align: center;
+    font-size: 28px;
+  }
+  .opt_text {
+    text-align: center;
+    font-size: 23px;
+  }
+  footer {
+    width: 100%;
+    height: 10%;
+    background: #EEEEEE;
+  }
+  #footer_text {
+    text-align: center;
+    padding: 10px;
+    padding-top: 25px;
+  }
+</style>
+<head>
+    <meta charset="UTF-8">
+    <title>Trustee Home</title>
+</head>
+<body>
+<header>
+    <h1 id="title" onclick="location.href='/trustee_home'">TRUSTEE HOME</h1>
+</header>
+<div id="main">
+    <h2 id="subtitle"><i id="subject">Genesis Configuration</i></h2>
+    <div id="container">
+        <div id="left" style="background: #E9967A;">
+            <h2 class="opt">ADD</h2>
+            <div id="left-top">
+                <button type="button" onclick="location.href='/add_genesis_steward'">
+                    <h2 class="opt_text">genesis steward</h2>
+                </button>
+            </div>
+            <div id="left-center">
+                <button type="button" onclick="location.href='/add_genesis_node'">
+                    <h2 class="opt_text">genesis node</h2>
+                </button>
+            </div>
+            <!--
+            <div id="left-bottom">
+                <button type="button" onclick="location.href='/add_steward'">
+                    <h2 class="opt_text">steward</h2>
+                </button>
+            </div>
+            -->
+        </div>
+        <div id="center" style="background: #ADD8E6;">
+            <h2 class="opt">GENERATE</h2>
+            <div id="center-top">
+                <button type="button" onclick="location.href='/generate_domain_genesis'">
+                    <h2 class="opt_text">domain genesis</h2>
+                </button>
+            </div>
+            <div id="center-bottom">
+                <button type="button" onclick="location.href='/generate_pool_genesis'">
+                    <h2 class="opt_text">pool genesis</h2>
+                </button>
+            </div>
+        </div>
+        <div id="right" style="background: #D8BFD8;">
+            <h2 class="opt">VIEW</h2>
+            <div id="right-top">
+                <button type="button" onclick="location.href='http://localhost/trustee/domain_transactions_genesis'">
+                    <h2 class="opt_text">domain transactions genesis</h2>
+                </button>
+            </div>
+            <div id="right-bottom">
+                <button type="button" onclick="location.href='http://localhost/trustee/pool_transactions_genesis'">
+                    <h2 class="opt_text">pool transactions genesis</h2>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <p id="footer_text"></p>
+</footer>
+</body>
+</html>

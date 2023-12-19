@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+  * {
+    padding: 0px;
+    margin: 0px;
+    font-style: italic;
+  }
+  html, body {
+    width: 100%;
+    height: 100%;
+  }
+  header {
+    width: 100%;
+    height: 20%;
+    font-size: 25px;
+    background: black;
+	color: white;
+	text-align: center;
+	position: relative;
+  }
+  #title {
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%,-50%)
+  }
+  #main {
+    height: 70%;
+    width: 100%;
+    text-align:center;
+  }
+  #passcode {
+    background:#F5F5F5;
+    font-size:15px;
+    width:60%;
+    height:40px;
+    margin-top:3%;
+    padding:0.5%;
+    padding-left:2%;
+    border-radius:20px 0px 0px 20px;
+    border:none;
+    border-bottom:3px solid #555555;
+    outline:none;"
+  }
+  #confirm {
+    font-size:15px;
+    background:#A9A9A9;
+    color:white;
+    width:7%;
+    height:53px;
+    border:none;
+    border-bottom:3px solid #555555;
+    border-radius:0px 20px 20px 0px;"
+  }
+  footer {
+    width: 100%;
+    height: 10%;
+    background: #EEEEEE;
+  }
+  #footer_text {
+    text-align: center;
+    padding: 10px;
+    padding-top: 25px;
+  }
+  #p_text {
+    font-size:17px;
+    margin-top:1%;
+  }
+</style>
+<head>
+    <meta charset="UTF-8">
+    <title>Trustee Login</title>
+</head>
+<body>
+<header>
+    <h1 id="title" onclick="location.href='/trustee_login'">TRUSTEE LOGIN</h1>
+</header>
+<div id="main">
+    <form method="post">
+        <input id="passcode" name="passcode" type="password" placeholder="Passcode" onfocus="this.placeholder=''" onblur="this.placeholder='Passcode'">
+        <input id="confirm" type="submit" value="Confirm">
+    </form>
+    <p id="p_text">Passcode: CHnCtcXSXTTSRLtk2Ixm6XyeI40R2FzH</p>
+</div>
+<p id="footer_text"></p>
+</body>
+</html>

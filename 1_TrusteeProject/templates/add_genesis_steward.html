@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+  * {
+    padding: 0px;
+    margin: 0px;
+    font-style: italic;
+  }
+  html, body {
+    width: 100%;
+    height: 100%;
+  }
+  header {
+    width: 100%;
+    height: 20%;
+    font-size: 25px;
+    background: black;
+	color: white;
+	text-align: center;
+	position: relative;
+  }
+  #title {
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%,-50%)
+  }
+  #main {
+    width: 100%;
+    height: 70%;
+  }
+  #container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  #left {
+    width:30%;
+    margin: 2% 2% 2% 2%;
+  }
+  #right {
+    width:70%;
+    margin: 2% 2% 2% 0;
+  }
+  #left, #right {
+    padding:2%;
+    min-height: 250px;
+    color: #333333;
+    background:#CCCCCC;
+    font-size:17px;
+    text-align: center;
+  }
+  .node_label {
+    display:flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align:left;
+  }
+  .h4_input {
+    padding-bottom:1%;
+    padding-right:3%;
+    padding-left:5%;
+  }
+  .node_input {
+    padding:1%;
+    border: none;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.7);
+    width: 50%;
+  }
+  .button_div {
+    border: none;
+    border-radius: 5px;
+    padding:2%;
+    width: 30%;
+    font-size:13px;
+    color: white;
+    background: gray;
+  }
+  table {
+    border: none;
+    border-radius:5px;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 1%;
+    margin-top: 1%;
+    margin-bottom: 2%;
+    width: 100%;
+  }
+  footer {
+    width: 100%;
+    height: 10%;
+    background: #EEEEEE;
+  }
+  #footer_text {
+    text-align: center;
+    padding: 10px;
+    padding-top: 25px;
+  }
+</style>
+<head>
+    <meta charset="UTF-8">
+    <title>Add genesis steward</title>
+</head>
+<body>
+<header>
+    <h1 id="title" onclick="location.href='/add_genesis_steward'">ADD GENESIS STEWARD</h1>
+</header>
+<div id="main">
+    <div id="container">
+        <div id="left">
+            <form method="post">
+                <h2 style="padding-bottom:7%;">Node Information</h2>
+                <hr>
+                <label class="node_label" style="padding-top:5%;">
+                    <h4 class="h4_input">* Steward Name: </h4>
+                    <input class="node_input" name="steward_name" type="text" placeholder="Steward Name" onfocus="this.placeholder=''" onblur="this.placeholder='Node Name'">
+                </label>
+                <br>
+                <div>
+                    <input class="button_div" type="submit" value="ADD">
+                    <button class="button_div" type="button" onclick="location.href='/trustee_home'"> BACK </button>
+                </div>
+            </form>
+            <p>{{error}}</p>
+        </div>
+        <div id="right">
+            <h2>List of available stewards</h2>
+            <table>
+                <tr>
+                    <th>Steward name</th>
+                    <th>Steward seed</th>
+                </tr>
+                {% for steward_def in steward_defs %}
+                <tr>
+                    <td>{{steward_def["name"]}}</td>
+                    <td>{{steward_def["sigseed"].decode("utf-8")}}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+</div>
+<p id="footer_text"></p>
+</body>
+</html>
