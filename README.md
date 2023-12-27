@@ -2,7 +2,7 @@
 ---
 
 # DID Authentication System
-![title](src/Paper.png){: width="10" height="10"}
+<img src="src/Paper.png" style="width:100px;height:100px">
 
 <br>
 
