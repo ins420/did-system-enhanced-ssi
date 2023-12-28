@@ -1,4 +1,4 @@
-# Deprecation Notice
+# Notice
 
 This project was created using the Hyperledger project’s [Aries Cloud Agent - Python Plugin for Aries Toolbox](https://github.com/hyperledger/aries-acapy-plugin-toolbox).
 
