@@ -1,4 +1,4 @@
-# Deprecation Notice
+# Notice
 
 This project was created using the Hyperledger project’s [aries-toolbox](https://github.com/hyperledger/aries-toolbox).
 This project is the ‘On-Campus DID Identity Authentication System’ project conducted by ‘INSlab (Hoseo University)’.
