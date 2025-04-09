@@ -43,7 +43,8 @@ sudo add-apt-repository --remove "deb https://repo.sovrin.org/sdk/deb xenial sta
 ### 3.4 Python Setup
 ```bash
 sudo apt-get install python3-dev python3-venv
-sudo pip3 install pip==9.0.3 Flask python3-indy pycryptodome
+sudo python3 -m pip install --upgrade pip==9.0.3
+sudo pip3 install Flask python3-indy pycryptodome
 ```
 ***
 ### 3.5 WebDAV Setup
